@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Çerez Operasyonu</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #00ff00; padding: 50px; text-align: center; }
+        .box { border: 2px solid #00ff00; padding: 20px; display: inline-block; background: #222; border-radius: 10px; box-shadow: 0 0 15px #00ff00; }
+        #cikti { font-size: 20px; margin-top: 20px; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Sistem Çerezlerini Yakala</h1>
+        <p>Durum: <span id="durum">Kontrol ediliyor...</span></p>
+        <hr>
+        <div id="cikti">Burada çerezler görünecek...</div>
+    </div>
+
+    <script>
+        // 1. ADIM: Tarayıcıya zorla bir çerez yaz (Tarihli ve yollu)
+        document.cookie = "OTURUM_ID=XSS_TEST_12345; expires=Fri, 31 Dec 2026 23:59:59 GMT; path=/";
+        document.cookie = "Kullanici=Hacker_Adayi; expires=Fri, 31 Dec 2026 23:59:59 GMT; path=/";
+
+        // 2. ADIM: Yazılan çerezi oku
+        var veriler = document.cookie;
+
+        // 3. ADIM: Ekrana Bas
+        var durumEkrani = document.getElementById('durum');
+        var ciktiEkrani = document.getElementById('cikti');
+
+        if (veriler.length > 0) {
+            durumEkrani.innerText = "BAŞARILI!";
+            durumEkrani.style.color = "#00ff00";
+            ciktiEkrani.innerHTML = "<strong>Yakalanan Veri:</strong> <br><br>" + veriler;
+        } else {
+            durumEkrani.innerText = "HATA!";
+            durumEkrani.style.color = "red";
+            ciktiEkrani.innerHTML = "Tarayıcı çerez yazmayı engelledi! <br><br> <small>Muhtemelen dosyayı çift tıklayarak açtın. <br> Bunu çözmek için dosyayı bir sunucuya (localhost) atman gerek.</small>";
+        }
+    </script>
+</body>
+</html>
