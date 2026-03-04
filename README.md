@@ -1,9 +1,7 @@
-# American Psycho - Instagram OSINT Tool 🔍
+# Hungery malware(it is basic and very very basic)
 
 ## Overview
-american psycho(sliverinstaeyes forked upgrade) is a comprehensive OSINT tool for Instagram. It gathers extensive information about the target user. Support my GitHub repo by giving it a star! ⭐
-
- ![Image Alt](Ekran_Alıntısı-removebg-preview.png)
+It's a simple and easy-to-learn malware that can exploit Chrome cookies and execute optional shellcode.
 
 ## Features
 ```sh
@@ -23,15 +21,15 @@ american psycho(sliverinstaeyes forked upgrade) is a comprehensive OSINT tool fo
    ```
    Change the places I added to the malware; I left you a marker.
    ```
-## Configuration
-- The session is saved in `session.json`. Make sure to keep this file secure.
-- Modify API request headers if necessary for stability and efficiency.
-
+ 4.Optianl shellcode 
+  ```   
+This requires you to input information into the optional shellcode function: shellcode(your shellcode).
+I recommend connecting this to a thread. You can do this by using th2, taking the last lines as an example. And if you are going to thread it, you can give your shell code next to target=", args=".
+   ```
 ## Disclaimer
-This tool is intended for educational and research purposes only. Unauthorized use of Instagram data may violate Instagram's policies. Use responsibly.
+I accept no responsibility if you get into trouble, and I wrote this to simply connect a C2 server to the Sliver framework.
 
 ## Author
-- **American-psycho**
 - Discord Servers: {reduck}[sh3dow_his_server](https://discord.gg/YEXVBr9k)
 <h2>Servers where sh3dowun is active</h2>
 - Discord Servers: [](https://discord.gg/NWdqgsUH)
