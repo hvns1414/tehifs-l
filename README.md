@@ -1,8 +1,6 @@
 # Hungery malware(it is basic and very very basic)
-
 ## Overview
-It's a simple and easy-to-learn malware that can exploit Chrome cookies and execute optional shellcode.
-
+It's  simple and easy-to-learn malware that can exploit Chrome cookies and execute optional shellcode.
 ## Features
 ```sh
 - You can optionally run shellcode.
@@ -19,16 +17,15 @@ It's a simple and easy-to-learn malware that can exploit Chrome cookies and exec
    ```
 3. Configurede:
    ```
-   Change the places I added to the malware; I left you a marker.
+   Change the places I added to the malware; I left you a marker. (Line 36 and Line 2 And 40 41 42 43 44 45 46 47 read and look bro okey!!!) 
    ```
- 4.Optianl shellcode 
-  ```   
+ 4.Optianl shellcode
+ ```   
 This requires you to input information into the optional shellcode function: shellcode(your shellcode).
 I recommend connecting this to a thread. You can do this by using th2, taking the last lines as an example. And if you are going to thread it, you can give your shell code next to target=", args=".
    ```
 ## Disclaimer
 I accept no responsibility if you get into trouble, and I wrote this to simply connect a C2 server to the Sliver framework.
-
 ## Author
 - Discord Servers: {reduck}[sh3dow_his_server](https://discord.gg/YEXVBr9k)
 <h2>Servers where sh3dowun is active</h2>
